@@ -3,9 +3,6 @@
 
 mysql_connect("localhost", "sasho", "secret") or die(mysql_error());
 mysql_select_db("museum") or die(mysql_error());
-//mysql_query("INSERT INTO tab (name, address, latitude,longditude)
-//VALUES ('sasho', 'suha reka', 1 , 2); ") 
-//or die(mysql_error()); 
 
 $arr = json_decode(file_get_contents("https://maps.googleapis.com/maps/api/place/textsearch/json?location=42.6959248,23.30452557&radius=10000&query=museum&key=AIzaSyATjO-mlr2-K91DPqA0WtT0Slb7JnqVokY"),true);
 foreach($arr['results']as $item) {
@@ -27,8 +24,7 @@ foreach($arr['results']as $item) {
  
 	}
 
-	/*http://localhost/php_example/php.php */
-	////<a href="javascript:load()">Click</a>
+	
 ?>
 
 
